@@ -20,11 +20,7 @@ public class MazeUtils {
 		// this.checkSize = Common.CELLW;
 		this.width = width;
 		this.height = height;
-		// this.tearDownAllowed = tearDownAllowed;
 		// this.solve = false;
-		// this.timer = new Timer(DELAY, new TimerListener());// 追赶者移动定时器
-
-		// this.currentResult = 0;// 游戏进行中
 		this.checks = new int[2 * this.height + 1][2 * this.width + 1];// 迷宫为height*width个方格
 		this.horizontal = new WallState[this.height + 1][this.width];
 		// 单位水平墙.horizontalWalls有height*width-1个

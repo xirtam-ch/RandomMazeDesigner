@@ -1,9 +1,9 @@
 package common;
 
-public interface Config {
-	int cellW = 20;
-	int startX = 40;
-	int startY = 40;
-	int mazeCount = 14;
-	String fileName = "mission";
+public class Config {
+	public static int cellW = 20;
+	public static int startX = 40;
+	public static int startY = 40;
+	public static int mazeCount = 14;
+	public static final String fileName = "mission";
 }
