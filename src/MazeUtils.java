@@ -389,13 +389,17 @@ public class MazeUtils {
 		if (i2 >= 0 && i2 < 2 * this.height + 1 && j2 >= 0
 				&& j2 < 2 * this.width + 1)
 			if (checks[i2][j2] == 0) {// 保证没有越界而且目标方格未踏足过
-				if (i1 == i2 - 1 && mazeData[i2][j2] == 0)// 从上往下
+				if (i1 == i2 - 1 && mazeData[i1][j1] == mazeData[i2][j2]
+						&& mazeData[i2][j2] == 0)// 从上往下
 					result = true;
-				else if (i1 == i2 + 1 && mazeData[i1][j1] == 0)// 从下往上
+				else if (i1 == i2 + 1 && mazeData[i1][j1] == mazeData[i2][j2]
+						&& mazeData[i2][j2] == 0)// 从下往上
 					result = true;
-				else if (j1 == j2 - 1 && mazeData[i2][j2] == 0)// 从左往右
+				else if (j1 == j2 - 1 && mazeData[i1][j1] == mazeData[i2][j2]
+						&& mazeData[i2][j2] == 0)// 从左往右
 					result = true;
-				else if (j1 == j2 + 1 && mazeData[i1][j1] == 0)// 从右往左
+				else if (j1 == j2 + 1 && mazeData[i1][j1] == mazeData[i2][j2]
+						&& mazeData[i2][j2] == 0)// 从右往左
 					result = true;
 			}
 		return result;
